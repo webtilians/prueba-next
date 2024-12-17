@@ -20,12 +20,12 @@ interface DashboardClientProps {
 
 export default function DashboardClient({ userEmail }: DashboardClientProps) {
     const data = generateMockData();
-    const columns: ColumnDef<User>[] = [
+    const columns = [
         { accessorKey: "id", header: "ID" },
         { accessorKey: "name", header: "Nombre" },
         { accessorKey: "email", header: "Correo Electrónico" },
         { accessorKey: "age", header: "Edad" },
-    ];
+      ];
     return (
         <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
             <header className="bg-blue-500 text-white py-4">

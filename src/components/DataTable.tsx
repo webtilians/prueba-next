@@ -11,7 +11,7 @@ import {
 
 interface DataTableProps<T> {
   data: T[];
-  columns: ColumnDef<T>[];
+  columns: { accessorKey: string; header: string }[];
 }
 
 export default function DataTable<T>({ data, columns }: DataTableProps<T>) {
@@ -33,7 +33,7 @@ export default function DataTable<T>({ data, columns }: DataTableProps<T>) {
 
   return (
     <div className="p-4 bg-white rounded-md shadow-md">
-      <table className="w-full table-auto border-collapse">
+      <table className="w-full table-auto text-black border-collapse">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id} className="border-b">

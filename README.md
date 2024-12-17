@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 Proyecto de Prueba: Dashboard con Next.js, TypeScript y Tailwind CSS
 
-## Getting Started
+Este proyecto es una implementación de un Dashboard con autenticación segura, tablas interactivas y gráficos dinámicos, construido con **Next.js 14**, **TypeScript** y **Tailwind CSS**.
 
-First, run the development server:
+---
+## credenciales 
+    test@example.com
+    123456
 
-```bash
+## 🚀 Características principales
+- 🔐 **Autenticación segura** con NextAuth.js (email/password).
+- 📈 **Dashboard interactivo** con gráficos y tablas dinámicas.
+- 💅 **Componentes reutilizables** usando Tailwind CSS.
+- ⚡ **Optimización de rendimiento**:
+  - Server Components y Lazy Loading.
+  - Renderizado progresivo con `Suspense`.
+- ✅ **Pruebas unitarias** con Jest y React Testing Library.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+- **Next.js 14**: Framework moderno con App Router.
+- **TypeScript**: Tipado seguro para una mejor experiencia de desarrollo.
+- **Tailwind CSS**: Estilos rápidos y responsivos.
+- **NextAuth.js**: Autenticación.
+- **Chart.js**: Visualización de gráficos.
+- **Jest** + **React Testing Library**: Pruebas unitarias.
+
+---
+
+## 📋 Requisitos previos
+- **Node.js** (v16 o superior).
+- **npm** (v8 o superior).
+
+---
+
+## ⚙️ Instalación y ejecución
+1. Clona el repositorio:
+   ```bash
+   git clone <url-del-repositorio>
+   cd prueba-next
+Instala las dependencias:
+
+bash
+
+npm install
+Inicia el servidor de desarrollo:
+
+bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Abre el navegador en:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
+📁 Estructura del proyecto
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+prueba-next/
+│
+├── public/              # Archivos estáticos
+├── src/
+│   ├── app/             # Rutas del App Router
+│   │   ├── page.tsx     # Página principal
+│   │   ├── layout.tsx   # Layout global
+│   │   ├── dashboard/   # Página del Dashboard
+│   │   └── api/         # API para autenticación (NextAuth)
+│   │
+│   ├── components/      # Componentes reutilizables
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   └── ThemeToggle.tsx
+│   │
+│   ├── data/            # Generación de datos de prueba
+│   ├── styles/          # Archivos CSS globales
+│   └── utils/           # Helpers y utilidades
+│
+├── jest.config.js       # Configuración de Jest
+├── jest.setup.js        # Configuración de Jest DOM
+├── tailwind.config.ts   # Configuración de Tailwind CSS
+├── tsconfig.json        # Configuración de TypeScript
+└── package.json         # Dependencias y scripts
