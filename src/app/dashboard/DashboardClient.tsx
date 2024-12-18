@@ -7,12 +7,12 @@ import ChartComponent from "@/components/ChartComponent";
 import { generateMockData } from "@/data/mockData";
 import DataTable from "@/components/DataTable";
 
-interface User {
-    id: number;
-    name: string;
-    email: string;
-    age: number;
-}
+// interface User {
+//     id: number;
+//     name: string;
+//     email: string;
+//     age: number;
+// }
 interface DashboardClientProps {
     userEmail: string;
 }
