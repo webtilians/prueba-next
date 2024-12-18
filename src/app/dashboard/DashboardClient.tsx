@@ -6,7 +6,6 @@ import ThemeToggle from "@/components/ThemeToggle";
 import ChartComponent from "@/components/ChartComponent";
 import { generateMockData } from "@/data/mockData";
 import DataTable from "@/components/DataTable";
-import { ColumnDef } from "@tanstack/react-table";
 
 interface User {
     id: number;
