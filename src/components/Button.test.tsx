@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Button from "./Button";
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 
 describe("Button Component", () => {
   it("renders the button with correct text", () => {
