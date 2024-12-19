@@ -13,7 +13,7 @@ interface DataTableProps<T> {
   columns: { accessorKey: string; header: string }[];
 }
 
-export default function DataTable<T>({ data, columns }: DataTableProps<T>) {
+const DataTable = ({ data, columns }: DataTableProps<any>) => {
   const [pagination, setPagination] = useState({
     pageIndex: 0,
     pageSize: 10, // Número de filas por página
@@ -32,7 +32,7 @@ export default function DataTable<T>({ data, columns }: DataTableProps<T>) {
 
   return (
     <div className="p-4 bg-white rounded-md shadow-md">
-      <table className="w-full table-auto text-black border-collapse">
+      <table className="min-w-full divide-y divide-gray-200">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id} className="border-b">
@@ -81,4 +81,6 @@ export default function DataTable<T>({ data, columns }: DataTableProps<T>) {
       </div>
     </div>
   );
-}
+};
+
+export default DataTable;

@@ -34,7 +34,9 @@ export default function DashboardClient({ userEmail }: DashboardClientProps) {
             <main className="container mx-auto p-6">
                 <div className="min-h-screen bg-gray-100 p-6">
                     <h1 className="text-3xl font-bold mb-4">Dashboard - Tabla de Datos</h1>
-                    <DataTable data={data} columns={columns} />
+                    <div className="overflow-x-auto">
+                      <DataTable data={data} columns={columns} />
+                    </div>
                 </div>
                 <div className="bg-white p-4 rounded-md shadow-md mb-6">
                     <h2 className="text-xl font-semibold mb-2">Resumen</h2>
