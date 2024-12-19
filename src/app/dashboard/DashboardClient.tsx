@@ -44,7 +44,7 @@ export default function DashboardClient({ userEmail }: DashboardClientProps) {
                 </div>
                 <Card title="Componente Card">
                     <p className="text-gray-600 dark:text-gray-300">
-                        Esto es un componente reutilizable.
+                        Datos estimados poblacionales de la ciudad.
                     </p>
                     <Button onClick={() => alert("¡Hola!")}>Haz clic</Button>
                 </Card>
