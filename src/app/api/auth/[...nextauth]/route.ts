@@ -12,20 +12,22 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const user = { id: "1", email: "test@example.com", password: "123456" };
+        try {
+          const user = { id: "1", email: "test@example.com", password: "123456" };
 
-        if (credentials?.email === user.email) {
-          // Comparamos la contraseña ingresada con una versión hasheada de "123456"
-          const passwordMatch = await bcrypt.compare(
-            credentials.password,
-            await bcrypt.hash(user.password, 10)
-          );
+          if (credentials?.email === user.email) {
+            const hashedPassword = await bcrypt.hash(user.password, 10);
+            const passwordMatch = await bcrypt.compare(credentials.password, hashedPassword);
 
-          if (passwordMatch) {
-            return { id: user.id, email: user.email };
+            if (passwordMatch) {
+              return { id: user.id, email: user.email };
+            }
           }
+          return null;
+        } catch (error) {
+          console.error("Error en authorize:", error);
+          throw new Error("Error al autorizar al usuario");
         }
-        return null;
       },
     }),
   ],

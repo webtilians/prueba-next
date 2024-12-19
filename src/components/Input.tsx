@@ -23,7 +23,7 @@ interface InputProps {
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className="w-full p-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          className="w-full p-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-black-700"
         />
       </div>
     );

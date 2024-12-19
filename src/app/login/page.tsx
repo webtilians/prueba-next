@@ -25,10 +25,10 @@ export default function LoginPage() {
             </label>
             <input
               type="email"
-              placeholder="tuemail@ejemplo.com"
+              placeholder="test@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="text-black-700 mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
