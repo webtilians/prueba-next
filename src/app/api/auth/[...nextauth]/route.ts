@@ -28,11 +28,7 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-  // La opción 'pages' era usada en el Pages Router. En el App Router,
-  // se recomienda manejar las páginas directamente en la carpeta "app".
-  //pages: {
-  //  signIn: "/login",
-  //},
+  
   session: {
     strategy: "jwt",
   },
