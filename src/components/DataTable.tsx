@@ -7,7 +7,7 @@ import {
   getPaginationRowModel,
   flexRender,
 } from "@tanstack/react-table";
-
+import Button from "./Button";
 interface DataTableProps<T> {
   data: T[];
   columns: { accessorKey: string; header: string }[];
@@ -61,23 +61,21 @@ const DataTable = ({ data, columns }: DataTableProps<any>) => {
       </table>
       {/* Paginación */}
       <div className="flex items-center justify-between mt-4">
-        <button
+        <Button
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50"
         >
           Anterior
-        </button>
+        </Button>
         <span>
           Página {table.getState().pagination.pageIndex + 1} de {table.getPageCount()}
         </span>
-        <button
+        <Button
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50"
         >
           Siguiente
-        </button>
+        </Button>
       </div>
     </div>
   );
